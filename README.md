@@ -1,0 +1,1 @@
+"# logstash-oracle2elasticsearch" 
