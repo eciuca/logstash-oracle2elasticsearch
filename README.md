@@ -23,3 +23,5 @@ docker run --rm \
 -v %cd%\oracle2elasticsearch-pipeline:/usr/share/logstash/oracle2elasticsearch-pipeline \
 docker.elastic.co/logstash/logstash:6.2.2
 ```
+
+4. Go and check the newly created index at `http://localhost:9200/[index_name]/_search`
