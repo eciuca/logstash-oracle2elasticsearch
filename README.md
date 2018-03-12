@@ -15,13 +15,7 @@
 3. Run the following command from the project root
 
 ```
-docker run --rm \
---network=host \
---add-host elasticsearch:127.0.0.1 \
--v %cd%\config\pipelines.yml:/usr/share/logstash/config/pipelines.yml \
--v %cd%\resources:/usr/share/logstash/resources \
--v %cd%\oracle2elasticsearch-pipeline:/usr/share/logstash/oracle2elasticsearch-pipeline \
-docker.elastic.co/logstash/logstash:6.2.2
+docker run --rm --network=host --add-host elasticsearch:127.0.0.1 -v %cd%\config\pipelines.yml:/usr/share/logstash/config/pipelines.yml -v %cd%\resources:/usr/share/logstash/resources -v %cd%\oracle2elasticsearch-pipeline:/usr/share/logstash/oracle2elasticsearch-pipeline docker.elastic.co/logstash/logstash:6.2.2
 ```
 
-4. Go and check the newly created index at `http://localhost:9200/[index_name]/_search`
+
