@@ -1,0 +1,3 @@
+docker run --rm --network=host --add-host elasticsearch:127.0.0.1 -v %cd%\config\pipelines.yml:/usr/share/logstash/config/pipelines.yml -v %cd%\resources:/usr/share/logstash/resources -v %cd%\oracle2elasticsearch-pipeline:/usr/share/logstash/oracle2elasticsearch-pipeline docker.elastic.co/logstash/logstash:6.2.2
+
+docker run -d --rm -p 9200:9200 -v %cd%\esdata:/usr/share/elasticsearch/data -v %cd%\elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml docker.elastic.co/elasticsearch/elasticsearch:6.2.2
